@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Error from './Error'
 
-function Pregunta ({ guardarPresupuesto, guardarRestante }) {
+function Pregunta ({ guardarPresupuesto, guardarRestante, actualizarPregunta }) {
   const [cantidad, guardarCantidad] = useState(0)
   const [error, guardarError] = useState(false)
   const handleChange = e => {
@@ -15,6 +15,7 @@ function Pregunta ({ guardarPresupuesto, guardarRestante }) {
     guardarError(false)
     guardarPresupuesto(cantidad)
     guardarRestante(cantidad)
+    actualizarPregunta(false)
   }
   return (
     <>
