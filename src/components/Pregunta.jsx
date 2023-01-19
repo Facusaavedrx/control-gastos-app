@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Error from './Error'
 
-function Pregunta () {
+function Pregunta ({ guardarPresupuesto, guardarRestante }) {
   const [cantidad, guardarCantidad] = useState(0)
   const [error, guardarError] = useState(false)
   const handleChange = e => {
@@ -13,6 +13,8 @@ function Pregunta () {
       return guardarError(true)
     }
     guardarError(false)
+    guardarPresupuesto(cantidad)
+    guardarRestante(cantidad)
   }
   return (
     <>
@@ -24,7 +26,7 @@ function Pregunta () {
         <input
           type='number'
           className='u-full-width'
-          placeholder='Coloca tu presupuesto..'
+          placeholder='Ejemplo: 1000'
           onChange={handleChange}
         />
         <input
