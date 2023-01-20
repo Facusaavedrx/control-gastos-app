@@ -15,6 +15,6 @@ function ControlPresupuesto ({ presupuesto, restante }) {
 }
 ControlPresupuesto.propTypes = {
   presupuesto: PropTypes.number.isRequired,
-  restate: PropTypes.number.isRequired
+  restante: PropTypes.number.isRequired
 }
 export default ControlPresupuesto
