@@ -21,7 +21,7 @@ function App () {
       guardarRestante(presupuestoRestante)
       guardarCrearGasto(false)
     }
-  }, [gasto])
+  }, [gasto, crearGasto, gastos, restante])
   return (
     <div className='App'>
       <div className='container'>
