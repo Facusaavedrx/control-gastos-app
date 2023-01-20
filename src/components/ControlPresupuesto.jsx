@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { revisarPresupuesto } from './helper'
 
 function ControlPresupuesto ({ presupuesto, restante }) {
@@ -11,5 +12,9 @@ function ControlPresupuesto ({ presupuesto, restante }) {
       </div>
     </>
   )
+}
+ControlPresupuesto.propTypes = {
+  presupuesto: PropTypes.number.isRequired,
+  restate: PropTypes.number.isRequired
 }
 export default ControlPresupuesto
